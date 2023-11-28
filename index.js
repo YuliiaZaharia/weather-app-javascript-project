@@ -23,6 +23,8 @@ function displayResultWeather(resultWeather) {
     let city = document.querySelector("#city");
     city.textContent = `${resultWeather.name}, ${resultWeather.sys.country}`; 
 
+    getOurDate();
+
     let temperature = document.querySelector("#temp");
     temperature.innerHTML = `${Math.round(resultWeather.main.temp)}<span>°</span>`;
 
