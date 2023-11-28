@@ -37,3 +37,8 @@ function displayResultWeather(resultWeather) {
     let variation = document.querySelector("#variation");
     variation.innerHTML = "Min: " + `${Math.round(resultWeather.main.temp_min)}<span>°</span>` + " " + "Max " + `${Math.round(resultWeather.main.temp_max)}<span>°</span>`
 }
+
+function getOurDate() {
+    const myDate = new Date;
+    
+}
