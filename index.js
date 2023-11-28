@@ -40,5 +40,17 @@ function displayResultWeather(resultWeather) {
 
 function getOurDate() {
     const myDate = new Date;
-    
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let day = days[myDate.getDay()];
+  
+    let todayDate = myDate.getDate();
+
+    let month = months[myDate.getMonth()];
+
+     let year = myDate.getFullYear();
+
+     let showDate = document.querySelector("#date");
+     showDate.textContent = `${day}` + " " + `${todayDate}` + " " + `${month}` + " " + `${year}` 
 }
