@@ -4,7 +4,7 @@ const api = {
 }
 
 const input = document.querySelector("#input"); 
-input.addEventListener("keydown", enter);
+input.addEventListener("keypress", enter);
 
 function enter(e) {
 if (e.keycode === 13) {
@@ -13,7 +13,12 @@ if (e.keycode === 13) {
 }
 
 async function getInfo(data) {
-const result = await fetch(`${api.root}weather?q=${data}&units=metric&appID=${api.key}`);
+const result = await fetch(`${api.root}weather?q=${data}&units=metric&aAPPID=${api.key}`);
 const resultWeather = await result.json();
 displayResultWeather(resultWeather);
+}
+
+function displayResultWeather(resultWeather) {
+    let city = document.querySelector("#city");
+    city.textContent = `${result.Weather.name}`
 }
