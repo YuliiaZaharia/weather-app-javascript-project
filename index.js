@@ -14,4 +14,6 @@ if (e.keycode === 13) {
 
 async function getInfo(data) {
 const result = await fetch(`${api.root}weather?q=${data}&units=metric&appID=${api.key}`);
+const resultWeather = await result.json();
+displayResultWeather(resultWeather);
 }
