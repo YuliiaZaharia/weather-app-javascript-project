@@ -3,3 +3,11 @@ const api = {
     key: "c5f91eb9fbdcb59a73cdd5411bb6dac8"
 }
 
+const input = document.querySelector("#input"); 
+input.addEventListener("keydown", enter);
+
+function enter(e) {
+if (e.keycode === 13) {
+    getInfo();
+}
+}
